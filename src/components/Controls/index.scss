@@ -1,0 +1,40 @@
+@import '../../elements';
+@import '../../globals/prefix';
+
+.#{$prefix}--controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__group,
+  &__group > li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+  }
+
+  &__group {
+    justify-content: flex-end;
+
+    &-divider {
+      margin-right: 1rem !important;
+      border-right: 1px solid var(--air--bg-02);
+      padding-right: 1rem !important;
+
+
+      @media screen and (min-width: 600px) {
+        margin-right: 2rem !important;
+        padding-right: 2rem !important;
+      }
+    }
+  }
+
+  &__group > li {
+    margin-left: 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

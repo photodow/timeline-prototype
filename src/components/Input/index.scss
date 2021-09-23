@@ -1,0 +1,19 @@
+@import '../../elements';
+@import '../../globals/prefix';
+
+.#{$prefix}--input {
+  padding: .5rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px var(--air--bg-02) solid;
+  border-radius: .5rem;
+  @include air-type--body-01;
+  color: var(--air--text-01);
+  background: var(--air--bg-01);
+  border: 2px solid var(--air--bg-02);
+
+  &:focus {
+    outline: 0;
+    border-color: var(--air--focus);
+  }
+}

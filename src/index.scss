@@ -1,0 +1,21 @@
+@import './elements';
+@import './components';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--air--bg-02);
+
+  @include air-type--body-01;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: max-content auto;
+}

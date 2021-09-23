@@ -1,0 +1,70 @@
+@import '../globals/prefix';
+
+$air-color--bg-01: $white;
+$air-color--bg-02: $light-gray;
+$air-color--text-01: $dark-gray;
+$air-color--text-02: rgba($air-color--text-01, .7);
+$air-color--text-03: $white;
+$air-color--text-01-alt: $light-gray;
+$air-color--text-02-alt: rgba($air-color--text-01-alt, .7);
+$air-color--text-03-alt: $black;
+$air-color--hover-01: rgba($white, .05);
+$air-color--hover-02: rgba($black, .05);
+$air-color--focus: $blue-01;
+$air-color--highlight: rgba($blue-01, .1);
+$air-color--highlight-alt: rgba($blue-01, .1);
+$air-color--gradient--blue: $blue-02 linear-gradient(90deg, $blue-02, $teal-02);
+$air-color--gradient--blue-alt: $blue-01 linear-gradient(90deg, $blue-01, $teal-01);
+$air-color--primary: $blue-02;
+$air-color--primary-alt: $blue-01;
+$air-color--danger: $red-01;
+
+@mixin air--theme-light {
+    --air--bg-01: #{$air-color--bg-01};
+    --air--bg-02: #{$air-color--bg-02};
+    --air--text-01: #{$air-color--text-01};
+    --air--text-02: #{$air-color--text-02};
+    --air--text-03: #{$air-color--text-03};
+    --air--text-01-alt: #{$air-color--text-01-alt};
+    --air--text-02-alt: #{$air-color--text-02-alt};
+    --air--text-03-alt: #{$air-color--text-03-alt};
+    --air--hover-01: #{$air-color--hover-01};
+    --air--hover-02: #{$air-color--hover-02};
+    --air--contrast: #{$white};
+    --air--focus: #{$air-color--focus};
+    --air--highlight: #{$air-color--highlight};
+    --air--gradient--blue: #{$air-color--gradient--blue};
+    --air--gradient--blue-alt: #{$air-color--gradient--blue-alt};
+    --air--primary: #{$air-color--primary};
+    --air--primary-alt: #{$air-color--primary-alt};
+    --air--danger: #{$air-color--danger};
+}
+
+@mixin air--theme-dark {
+    --air--bg-01: #{$black};
+    --air--bg-02: #{$dark-gray};
+    --air--text-01: #{$air-color--text-01-alt};
+    --air--text-02: #{$air-color--text-02-alt};
+    --air--text-03: #{$air-color--text-03-alt};
+    --air--text-01-alt: $white;
+    --air--text-02-alt: #{$air-color--text-02};
+    --air--text-03-alt: #{$air-color--text-03};
+    --air--hover-01: #{$air-color--hover-02};
+    --air--hover-02: #{$air-color--hover-01};
+    --air--contrast: #000;
+    --air--focus: #{$air-color--focus};
+    --air--highlight: #{$air-color--highlight};
+    --air--gradient--blue: #{$air-color--gradient--blue-alt};
+    --air--gradient--blue-alt: #{$air-color--gradient--blue};
+    --air--primary: #{$air-color--primary-alt};
+    --air--primary-alt: #{$air-color--primary};
+    --air--danger: #{$air-color--danger};
+}
+
+:root {
+  @include air--theme-light();
+}
+
+.#{$prefix}--theme--dark {
+  @include air--theme-dark();
+}

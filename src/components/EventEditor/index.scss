@@ -1,0 +1,36 @@
+@import '../../elements';
+@import '../../globals/prefix';
+
+.#{$prefix}--timeline-editor {
+  &__title {
+    @include air-type--heading-02;
+    color: var(--air--text-01);
+    margin: .5rem 0;
+  }
+
+  &__label {
+    display: block;
+    @include air-type--label-01;
+    color: var(--air--text-02);
+    margin-bottom: .25rem;
+  }
+
+  &__group {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 50%;
+
+    &:first-of-type {
+      margin-top: 2rem;
+      margin-right: 4rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__btn {
+    margin-right: 1rem;
+  }
+}

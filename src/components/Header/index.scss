@@ -1,0 +1,26 @@
+@import '../../elements';
+@import '../../globals/prefix';
+
+.#{$prefix}--header {
+    background: var(--air--bg-01);
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+
+    @media screen and (min-width: 600px) {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: max-content auto;
+        direction: rtl;
+
+        > * {
+          direction: initial;
+        }
+    }
+}
+
+.#{$prefix}--page-title {
+    margin: 0;
+    margin-right: 2rem;
+    color: var(--air--text-01);
+    @include air-type--heading-01;
+}
